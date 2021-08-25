@@ -1,11 +1,12 @@
 #charsWrapper > div {
-    width: 10px;
-    height: 20px;
+    width: 12px;
+    height: 23px;
 
     position: absolute;
 
     background: lightpink;
     cursor: pointer;
+    
     font-size: 20px;
-
+    font-family: monospace;
 }

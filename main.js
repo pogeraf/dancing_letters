@@ -27,7 +27,7 @@ function generateElementsByChars(chars = []) {
         const charElement = document.createElement('div');
         charElement.id = String(index);
         charElement.innerText = char;
-        charElement.style.left = `${(index + 1) * 10}px`;
+        charElement.style.left = `${(index + 1) * 12}px`;
         charElement.addEventListener('click', attachElementToCursor); /*Add event 'click' on a element*/
         charsWrapperElement.appendChild(charElement);
     })
@@ -76,16 +76,16 @@ function checkOtherElementInNewPosition() {
 
         const topLayering = (
             (attachedElement.offsetTop >= element.top
-                && attachedElement.offsetTop <= element.top + 20)
-            || (attachedElement.offsetTop + 20 >= element.top
-                && attachedElement.offsetTop + 20 <= element.top + 20)
+                && attachedElement.offsetTop <= element.top + 23)
+            || (attachedElement.offsetTop + 23 >= element.top
+                && attachedElement.offsetTop + 23 <= element.top + 23)
         );
 
         const leftLayering = (
             (attachedElement.offsetLeft >= element.left
-                && attachedElement.offsetLeft <= element.left + 10)
-            || (attachedElement.offsetLeft + 10 >= element.left
-                && attachedElement.offsetLeft + 10 <= element.left + 10)
+                && attachedElement.offsetLeft <= element.left + 12)
+            || (attachedElement.offsetLeft + 12 >= element.left
+                && attachedElement.offsetLeft + 12 <= element.left + 12)
         );
         if (leftLayering && topLayering) {
             /*make if elements layering*/
